@@ -1,0 +1,20 @@
+{
+    "AST": "Module(\n    body=[\n        FunctionDef(\n            name='add',\n            args=arguments(\n                args=[\n                    arg(arg='a'),\n                    arg(arg='b')]),\n            body=[\n                Assign(\n                    targets=[\n                        Name(id='result', ctx=Store())],\n                    value=BinOp(\n                        left=Name(id='a', ctx=Load()),\n                        op=Add(),\n                        right=Name(id='b', ctx=Load()))),\n                Return(\n                    value=Name(id='result', ctx=Load()))]),\n        Assign(\n            targets=[\n                Name(id='x', ctx=Store())],\n            value=Call(\n                func=Name(id='add', ctx=Load()),\n                args=[\n                    Constant(value=5),\n                    Constant(value=10)])),\n        Expr(\n            value=Call(\n                func=Name(id='print', ctx=Load()),\n                args=[\n                    Name(id='x', ctx=Load())]))])",
+    "SymbolTable": [
+        {
+            "name": "add",
+            "is_global": true,
+            "is_parameter": false
+        },
+        {
+            "name": "x",
+            "is_global": true,
+            "is_parameter": false
+        },
+        {
+            "name": "print",
+            "is_global": true,
+            "is_parameter": false
+        }
+    ]
+}
